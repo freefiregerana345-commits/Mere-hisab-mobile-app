@@ -9,6 +9,8 @@ An offline-first Android-focused shop companion for billing, khata, customer rec
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/mera-hisab run dev` — run the Expo mobile preview
 - `pnpm --filter @workspace/mera-hisab run typecheck` — typecheck the mobile app
+- `EXPO_BUILD_METRO_PORT=8082 pnpm --filter @workspace/mera-hisab run build` — build the static production bundle
+- `cd artifacts/mera-hisab/android && ./gradlew assembleDebug` — build a debug APK when Android SDK tooling is available
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
@@ -29,6 +31,9 @@ An offline-first Android-focused shop companion for billing, khata, customer rec
 - `artifacts/mera-hisab/app/(tabs)/` — Home, Khata, Bills, Stock, and More mobile screens
 - `artifacts/mera-hisab/components/` — shared mobile UI and quick-entry sheets
 - `artifacts/mera-hisab/constants/colors.ts` — Mera Hisab visual tokens
+- `artifacts/mera-hisab/app.json` — Android package ID, icon, splash, and native settings
+- `artifacts/mera-hisab/android/` — generated native Android project
+- `artifacts/mera-hisab/ANDROID_BUILD.md` — APK build and signing instructions
 
 ## Architecture decisions
 

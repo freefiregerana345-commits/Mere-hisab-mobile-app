@@ -113,6 +113,7 @@ type AppContextValue = AppState & {
   seedDemo: () => void;
   clearDemo: () => void;
   exportBackup: () => Promise<string>;
+  importBackup: (raw: string) => Promise<boolean>;
   resetProfile: () => Promise<void>;
 };
 
@@ -236,9 +237,29 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const clearDemo = () => setState((prev) => ({ ...prev, customers: prev.customers.filter((item) => !item.id.startsWith('demo-')), products: prev.products.filter((item) => !item.id.startsWith('demo-')), sales: prev.sales.filter((item) => !item.id.startsWith('demo-')), ledger: prev.ledger.filter((item) => !item.id.startsWith('demo-')) }));
 
   const exportBackup = async () => JSON.stringify({ exportedAt: now(), app: 'Mera Hisab', data: state }, null, 2);
+  const importBackup = async (raw: string) => {
+    try {
+      const parsed = JSON.parse(raw) as { data?: Partial<AppState> };
+      if (!parsed.data || !parsed.data.business || !Array.isArray(parsed.data.customers) || !Array.isArray(parsed.data.products)) return false;
+      setState({
+        ...initialState,
+        ...parsed.data,
+        business: { ...initialState.business, ...parsed.data.business },
+        customers: parsed.data.customers ?? [],
+        suppliers: parsed.data.suppliers ?? [],
+        products: parsed.data.products ?? [],
+        sales: parsed.data.sales ?? [],
+        ledger: parsed.data.ledger ?? [],
+        expenses: parsed.data.expenses ?? [],
+      });
+      return true;
+    } catch {
+      return false;
+    }
+  };
   const resetProfile = async () => { await AsyncStorage.removeItem(STORAGE_KEY); setState(initialState); };
 
-  const value = useMemo(() => ({ ...state, ready, updateBusiness, addCustomer, addProduct, addSale, addPayment, addExpense, addPurchase, seedDemo, clearDemo, exportBackup, resetProfile }), [state, ready]);
+  const value = useMemo(() => ({ ...state, ready, updateBusiness, addCustomer, addProduct, addSale, addPayment, addExpense, addPurchase, seedDemo, clearDemo, exportBackup, importBackup, resetProfile }), [state, ready]);
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 
