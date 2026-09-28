@@ -1,0 +1,1797 @@
+BUILD A COMPLETE LOCAL-FIRST BILLING + KHATA + INVENTORY APP
+
+Build a complete, production-ready Android-first business management application inspired by the useful functionality of popular Indian billing and khata applications such as MyBillBook and Khatabook.
+
+IMPORTANT:
+Do NOT copy their source code, logos, copyrighted assets, exact UI, or proprietary designs.
+
+Create an ORIGINAL application with its own branding, UI, components, layouts and code.
+
+The application should combine:
+
+- Billing
+- Khata / Ledger
+- Customer management
+- Supplier management
+- Inventory
+- Sales
+- Purchases
+- Expenses
+- Payment tracking
+- Reports
+- Invoice customization
+- UPI payment information
+- WhatsApp Business sharing/redirect
+- A4 printing
+- Mini thermal printer printing
+- PDF generation
+- Local backup/restore
+- Multiple local users
+- Unlimited records
+- Offline-first operation
+
+The application should be completely free to use.
+
+---
+
+1. MOST IMPORTANT REQUIREMENT — LOCAL STORAGE ONLY
+
+THIS IS A LOCAL-FIRST APPLICATION.
+
+Do NOT use:
+
+- Firebase
+- Supabase
+- MongoDB Atlas
+- PostgreSQL cloud
+- MySQL cloud
+- Any paid database
+- Any cloud database
+- Any mandatory online server
+- Any paid API
+- Any subscription
+- Any usage limit
+- Any per-invoice charge
+- Any per-customer charge
+- Any per-bill charge
+
+All business data must be stored locally on the user's device.
+
+The application should use an appropriate local database such as:
+
+- IndexedDB
+- SQLite
+- OPFS
+- or another reliable local storage/database solution.
+
+Choose the best option for a React/TypeScript PWA running on Android.
+
+The application must continue working without internet.
+
+Internet should only be needed for optional external actions such as opening WhatsApp Business.
+
+---
+
+2. MULTIPLE USERS ON THE SAME DEVICE
+
+The app can support multiple local users/business profiles.
+
+For example:
+
+User 1:
+Shop Owner
+
+User 2:
+Employee
+
+User 3:
+Another Shop
+
+Each local profile must have its own:
+
+- Customers
+- Suppliers
+- Products
+- Stock
+- Sales
+- Purchases
+- Expenses
+- Khata
+- Invoices
+- Settings
+- Business information
+- UPI information
+- Invoice templates
+
+Data from one profile must NEVER accidentally appear in another profile.
+
+Provide:
+
+- Create profile
+- Select profile
+- Switch profile
+- Edit profile
+- Delete profile
+- Optional PIN/password protection
+
+Because everything is local, the profiles must be stored on the device.
+
+Do not require an online account.
+
+---
+
+3. UNLIMITED USAGE
+
+There must be NO artificial application limits.
+
+Do not limit:
+
+- Number of customers
+- Number of suppliers
+- Number of products
+- Number of invoices
+- Number of khata transactions
+- Number of purchases
+- Number of expenses
+- Number of reports
+
+Do not show:
+
+"Upgrade to Pro"
+
+"Buy subscription"
+
+"Free limit reached"
+
+"Pay to continue"
+
+The app is intended to be free.
+
+The only practical limitation should be the storage capacity of the user's own device.
+
+---
+
+4. BRANDING
+
+Create an original brand.
+
+Suggested name:
+
+"Mera Hisab"
+
+You may create a clean original logo based around:
+
+- A simple bill/ledger symbol
+- Blue color
+- White background
+
+DO NOT copy the MyBillBook or Khatabook logo.
+
+Primary visual identity:
+
+WHITE + BLUE
+
+Use:
+
+- White backgrounds
+- Blue primary buttons
+- Blue navigation elements
+- Blue logo
+- Light blue highlights
+- Dark text
+- Soft gray borders
+- Clean cards
+
+The interface should look professional, modern and trustworthy.
+
+Avoid excessive colors.
+
+Use blue as the main brand color.
+
+---
+
+5. MOBILE-FIRST UI
+
+The primary device is Android phone.
+
+The application should feel like a real Android business app.
+
+Create:
+
+Bottom navigation:
+
+1. Home
+2. Khata
+3. Bills
+4. Stock
+5. More
+
+Use large touch-friendly buttons.
+
+Use floating action buttons for:
+
++ Sale
++ Purchase
++ Customer
++ Payment
++ Product
+
+Make every important action reachable with minimal taps.
+
+Also support:
+
+- Tablet
+- Desktop
+- Laptop
+
+---
+
+6. DASHBOARD
+
+Create a professional business dashboard.
+
+Show:
+
+Today's Sales
+Today's Purchases
+Today's Expenses
+Today's Profit Estimate
+
+Total Receivable
+Total Payable
+
+Total Customers
+Total Suppliers
+Total Products
+
+Low Stock
+
+Recent Bills
+
+Recent Khata Transactions
+
+Use attractive cards.
+
+Example:
+
+┌─────────────────────────────┐
+│ Today's Sales               │
+│ ₹ 12,500                    │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│ To Receive                  │
+│ ₹ 8,250                     │
+└─────────────────────────────┘
+
+Quick Actions:
+
+[ + Sale ]
+
+[ + Purchase ]
+
+[ + Khata ]
+
+[ + Customer ]
+
+[ + Product ]
+
+[ + Payment ]
+
+---
+
+7. KHATA SYSTEM
+
+Build a complete digital khata.
+
+Customer profile:
+
+- Name
+- Mobile
+- Address
+- Opening balance
+- Notes
+- Customer type
+
+Customer ledger should show:
+
+Date
+Description
+Credit
+Debit
+Balance
+
+Example:
+
+01 Sep
+Sale
++₹1,000
+
+03 Sep
+Payment
+-₹500
+
+Balance:
+₹500
+
+Clearly display:
+
+"Customer will give me"
+
+or
+
+"I have to give customer"
+
+depending on balance direction.
+
+Allow:
+
+- Add transaction
+- Edit transaction
+- Delete transaction
+- Add payment
+- Search
+- Filter
+- Date range
+- Complete history
+
+---
+
+8. CUSTOMER PAYMENT
+
+Create a payment screen.
+
+Example:
+
+Customer balance:
+₹5,000
+
+Customer pays:
+₹2,000
+
+New balance:
+₹3,000
+
+Allow payment method:
+
+- Cash
+- UPI
+- Bank
+- Card
+- Other
+
+Automatically create the ledger entry.
+
+---
+
+9. SUPPLIER KHATA
+
+Create the same type of ledger for suppliers.
+
+Supplier:
+
+- Name
+- Phone
+- Address
+- Opening balance
+- Notes
+
+Track:
+
+Purchases
+Payments
+Outstanding
+
+---
+
+10. PRODUCT / STOCK MANAGEMENT
+
+Product fields:
+
+- Product name
+- SKU
+- Barcode
+- Category
+- Unit
+- Purchase price
+- Selling price
+- MRP
+- GST/tax
+- Current stock
+- Minimum stock
+- Description
+
+Units:
+
+- Piece
+- Kg
+- Gram
+- Liter
+- Meter
+- Box
+- Packet
+- Dozen
+- Custom unit
+
+Stock operations:
+
+- Stock in
+- Stock out
+- Adjustment
+- Purchase
+- Sale
+- Return
+
+Automatically:
+
+SALE → STOCK DECREASE
+
+PURCHASE → STOCK INCREASE
+
+Return → Correct stock automatically.
+
+Show low-stock warnings.
+
+---
+
+11. BILLING SYSTEM
+
+Create a complete POS-style billing screen.
+
+The user should be able to:
+
+1. Select customer
+2. Search product
+3. Add product
+4. Change quantity
+5. Change price if allowed
+6. Apply discount
+7. Apply tax
+8. See subtotal
+9. See total
+10. Enter paid amount
+11. Calculate due
+12. Select payment method
+13. Save invoice
+14. Print
+15. Generate PDF
+16. Share
+
+Invoice calculation:
+
+Subtotal
+
+- Discount
+
++ Tax
+  = Grand Total
+
+Grand Total
+
+- Paid
+  = Due
+
+---
+
+12. FAST BILLING / POS MODE
+
+Create a special fast billing mode for shops.
+
+It should have:
+
+- Product search
+- Barcode search
+- Large product buttons
+- Quantity controls
+- Cart
+- Customer selection
+- Cash/UPI/Credit buttons
+- Instant bill generation
+
+The user should be able to create a simple bill very quickly.
+
+---
+
+13. BILL NUMBER
+
+Automatically generate invoice numbers.
+
+Example:
+
+INV-0001
+INV-0002
+INV-0003
+
+Allow customization:
+
+Prefix:
+INV-
+
+Starting number:
+1
+
+Also support:
+
+SALE-2026-0001
+
+Do not accidentally duplicate invoice numbers.
+
+---
+
+14. FULL BILL CUSTOMIZATION
+
+THIS IS VERY IMPORTANT.
+
+The user must be able to customize the invoice.
+
+Create:
+
+"Customize Bill"
+
+section.
+
+Allow changing:
+
+- Shop name
+- Shop logo
+- Address
+- Phone
+- Email
+- GSTIN
+- Invoice title
+- Invoice number format
+- Date format
+- Font size
+- Font style
+- Header
+- Footer
+- Terms and conditions
+- Thank-you message
+- Customer information
+- Item columns
+- Discount visibility
+- Tax visibility
+- Payment information
+- UPI information
+- QR code
+- Signature
+- Authorized signatory
+- Notes
+
+Allow showing/hiding fields.
+
+---
+
+15. BILL TEMPLATES
+
+Provide multiple ORIGINAL invoice templates.
+
+At least:
+
+Template 1 — Classic
+
+Clean professional invoice.
+
+Template 2 — Modern
+
+Modern blue header.
+
+Template 3 — Simple
+
+Minimal black/white/blue invoice.
+
+Template 4 — Retail
+
+Designed for shop billing.
+
+Template 5 — Compact
+
+For thermal printing.
+
+Template 6 — Detailed
+
+More information and tax columns.
+
+Allow:
+
+Preview Template
+
+Apply Template
+
+Customize Template
+
+Save Custom Template
+
+The templates must be original designs.
+
+---
+
+16. A4 PRINTING
+
+Support normal A4 printers.
+
+Create proper A4 invoice layout.
+
+Support:
+
+- A4 portrait
+- A4 landscape if useful
+- Print preview
+- Print
+- PDF
+
+The invoice should fit correctly on an A4 page.
+
+Avoid cutting important information.
+
+---
+
+17. MINI THERMAL PRINTER SUPPORT
+
+THIS IS VERY IMPORTANT.
+
+The application must support small thermal receipt printers commonly used by shops.
+
+Design a special:
+
+"Thermal Bill"
+
+format.
+
+Support common paper widths:
+
+- 58mm
+- 80mm
+
+Create compact invoice layouts specifically for thermal printers.
+
+The thermal bill should contain:
+
+SHOP NAME
+
+Address
+Phone
+
+---
+
+Invoice No: INV-001
+Date: 28/09/2026
+Customer: Rahul
+
+Item       Qty   Rate
+Rice        2    100
+Oil         1    150
+
+---
+
+Subtotal       ₹350
+Discount        ₹10
+Total          ₹340
+Paid           ₹340
+Due              ₹0
+
+Thank You!
+
+Allow print through browser/device printing where supported.
+
+If direct Bluetooth thermal printing cannot be reliably implemented as a browser-only PWA, do NOT fake the functionality.
+
+Instead:
+
+- Generate a printer-compatible 58mm/80mm print layout.
+- Open the system print dialog.
+- Provide a clean print page.
+- Structure the code so native Android Bluetooth printing can be added later.
+
+Do not claim Bluetooth printing works if the browser cannot actually support it.
+
+---
+
+18. DUPLICATE BILL / CUSTOMER COPY + SHOP COPY
+
+The user wants to generate two copies of the same invoice.
+
+Provide:
+
+"Print 2 Copies"
+
+The two copies should be identical or optionally labeled:
+
+COPY 1 — CUSTOMER COPY
+
+COPY 2 — SHOP COPY
+
+Allow:
+
+- 1 copy
+- 2 copies
+- Custom number of copies
+
+This should work for:
+
+- A4
+- Thermal
+
+For thermal printing, allow repeated copies if supported by the printer/system.
+
+---
+
+19. PAYMENT QR CODE
+
+The bill must optionally show a payment QR code.
+
+Business settings should contain:
+
+UPI ID
+
+Example:
+
+myshop@upi
+
+Allow entering:
+
+- UPI ID
+- Payee name
+
+Generate a valid UPI payment QR where possible.
+
+The QR should optionally encode:
+
+upi://pay?pa=...
+
+The user should be able to choose whether the QR appears on:
+
+- A4 invoice
+- Thermal invoice
+- PDF
+- Digital invoice
+
+Also show:
+
+"Scan to Pay"
+
+---
+
+20. PAYMENT INFORMATION ON BILL
+
+Allow the invoice to show:
+
+Payment methods:
+
+Cash
+UPI
+Card
+Bank
+Credit
+
+And optionally:
+
+UPI ID:
+myshop@upi
+
+Payment QR
+
+Payment instructions
+
+This must be customizable.
+
+---
+
+21. WHATSAPP BUSINESS INTEGRATION
+
+VERY IMPORTANT.
+
+Do NOT require a paid WhatsApp API.
+
+Add:
+
+"WhatsApp"
+
+and
+
+"WhatsApp Business"
+
+sharing options where the device supports them.
+
+The user should be able to select:
+
+Share Bill on WhatsApp
+
+When clicked:
+
+- Generate a formatted message.
+- Open WhatsApp Business if the device supports a WhatsApp Business deep link/intent.
+- Otherwise use the Android/browser share mechanism.
+
+Example message:
+
+Hello Rahul,
+
+Thank you for shopping with Mera Hisab.
+
+Invoice: INV-0012
+Date: 28/09/2026
+Total: ₹1,250
+Paid: ₹1,000
+Due: ₹250
+
+Thank you!
+
+Do not send messages automatically.
+
+The user must always confirm/send from WhatsApp.
+
+Also provide:
+
+Share Khata
+
+Example:
+
+Hello Rahul,
+
+Your current outstanding balance is ₹2,500.
+
+Thank you.
+
+The application must not use an unofficial WhatsApp API or violate WhatsApp rules.
+
+---
+
+22. WHATSAPP BUSINESS BUTTONS
+
+Add convenient buttons throughout the app:
+
+Customer page:
+[ WhatsApp ]
+
+Khata page:
+[ Send Khata on WhatsApp ]
+
+Invoice page:
+[ WhatsApp Bill ]
+
+Payment page:
+[ Send Payment Confirmation ]
+
+Use the customer's saved phone number when available.
+
+Do not automatically message anyone.
+
+---
+
+23. PURCHASE MANAGEMENT
+
+Create purchase invoices.
+
+Fields:
+
+- Supplier
+- Date
+- Product
+- Quantity
+- Purchase price
+- Discount
+- Tax
+- Total
+- Paid
+- Due
+- Payment method
+
+On purchase:
+
+- Increase stock
+- Update supplier ledger
+
+---
+
+24. EXPENSE MANAGEMENT
+
+Add:
+
+Expenses
+
+Fields:
+
+- Date
+- Category
+- Amount
+- Description
+- Payment method
+
+Categories:
+
+Rent
+Electricity
+Salary
+Transport
+Packaging
+Internet
+Maintenance
+Other
+
+Include expenses in profit reports.
+
+---
+
+25. REPORTS
+
+Create:
+
+Sales Report
+Purchase Report
+Profit Estimate
+Expense Report
+Customer Outstanding
+Supplier Outstanding
+Stock Report
+Payment Report
+Tax/GST Report if enabled
+
+Filters:
+
+- Today
+- Yesterday
+- This week
+- This month
+- Last month
+- Custom date range
+
+Allow export to:
+
+- PDF
+- CSV
+
+---
+
+26. PROFIT CALCULATION
+
+Calculate estimated profit.
+
+Basic formula:
+
+Sales Revenue
+
+- Product Cost
+- Discounts
+- Expenses
+  = Estimated Profit
+
+Clearly distinguish estimated profit from audited/accounting profit.
+
+---
+
+27. RETURNS
+
+Support:
+
+Sales Return
+
+Purchase Return
+
+When sales return happens:
+
+- Increase stock
+- Adjust customer balance/payment as appropriate
+
+When purchase return happens:
+
+- Decrease stock
+- Adjust supplier balance/payment as appropriate
+
+Maintain proper transaction history.
+
+---
+
+28. BARCODE
+
+Allow products to have barcode numbers.
+
+Provide:
+
+- Manual barcode entry
+- Barcode search
+
+If browser/device camera permission is available, optionally support barcode scanning.
+
+Do not make barcode scanning mandatory for the app to work.
+
+---
+
+29. BACKUP
+
+Because data is local, backup is VERY IMPORTANT.
+
+Create:
+
+Export Full Backup
+
+Export all business data into a JSON backup file.
+
+Example:
+
+MeraHisab_Backup_2026-09-28.json
+
+Also provide:
+
+Import Backup
+
+Before importing:
+
+- Show confirmation
+- Explain whether it will merge or replace
+- Never silently delete data
+
+Provide two modes:
+
+1. Replace current profile data
+2. Merge compatible data where technically safe
+
+Also export CSV for:
+
+Customers
+Suppliers
+Products
+Sales
+Purchases
+Expenses
+Khata
+
+---
+
+30. NO CLOUD DEPENDENCY
+
+The backup file belongs to the user.
+
+Do not upload it automatically anywhere.
+
+Do not create automatic cloud sync.
+
+The app should work completely offline.
+
+---
+
+31. DATA SAFETY
+
+Implement:
+
+- Local database transactions
+- Validation
+- Safe deletion
+- Confirmation before destructive actions
+- Backup reminders
+- Database integrity checks
+
+Important financial records should not be permanently deleted without confirmation.
+
+Prefer soft-delete/archive where appropriate.
+
+---
+
+32. SEARCH
+
+Global search should find:
+
+Customers
+Suppliers
+Products
+Invoices
+Khata entries
+Payments
+
+Search should be fast.
+
+---
+
+33. SETTINGS
+
+Create settings sections:
+
+Business Profile
+Invoice Settings
+Bill Templates
+Payment Settings
+UPI Settings
+WhatsApp Settings
+Printer Settings
+Thermal Printer Settings
+Language
+Theme
+Backup & Restore
+Data Management
+Security
+About
+
+---
+
+34. LANGUAGE
+
+Support:
+
+English
+Hindi
+
+Keep all UI strings in a translation system.
+
+Do not hard-code every label inside components.
+
+---
+
+35. THEME
+
+Primary theme:
+
+WHITE + BLUE
+
+Also provide:
+
+Light mode
+Dark mode
+
+But the default must be:
+
+White + Blue
+
+Keep the logo blue.
+
+Buttons and important UI elements should use the blue brand color.
+
+---
+
+36. DATABASE ARCHITECTURE
+
+Use a robust local database.
+
+Suggested entities:
+
+profiles
+business_settings
+users
+customers
+suppliers
+products
+categories
+sales
+sale_items
+purchases
+purchase_items
+ledger_transactions
+payments
+expenses
+stock_movements
+invoices
+invoice_templates
+invoice_settings
+backup_metadata
+
+Every record must belong to the correct local profile.
+
+Use proper indexes for:
+
+- customer search
+- product search
+- invoice number
+- dates
+- ledger transactions
+
+---
+
+37. FINANCIAL CALCULATIONS
+
+Do not use unsafe floating-point arithmetic for money.
+
+Use:
+
+- integer smallest currency units
+  OR
+- a reliable decimal library.
+
+Example:
+
+₹100.50
+
+must remain exactly:
+
+₹100.50
+
+Never produce:
+
+₹100.499999
+
+---
+
+38. OFFLINE PWA
+
+Make the app a Progressive Web App.
+
+Provide:
+
+- Installable on Android
+- Offline caching
+- App icon
+- Splash screen if possible
+- Responsive layout
+
+The app should continue working when the internet is completely unavailable.
+
+---
+
+39. SECURITY / LOCAL PRIVACY
+
+Since the data is stored on the device:
+
+- Do not send business data to external servers.
+- Do not include analytics that upload customer data.
+- Do not upload phone numbers.
+- Do not upload invoices.
+- Do not upload khata data.
+
+If PIN protection is implemented, do not store the PIN in plain text.
+
+---
+
+40. USER EXPERIENCE
+
+The application should feel like a real shop-management app.
+
+Prioritize:
+
+Simplicity
+Speed
+Large buttons
+Clear numbers
+Fast billing
+Easy khata
+Easy printing
+Easy WhatsApp sharing
+
+Avoid unnecessary accounting complexity.
+
+---
+
+41. IMPORTANT: DO NOT BUILD A STATIC DEMO
+
+Do NOT create only beautiful screens.
+
+Every major feature must actually work with the local database.
+
+The following complete workflow MUST work:
+
+1. Create business profile
+2. Add customer
+3. Add product
+4. Add stock
+5. Create sale
+6. Generate invoice
+7. Reduce stock
+8. Update customer khata
+9. Record payment
+10. Calculate due
+11. Show QR
+12. Print A4 bill
+13. Print thermal bill layout
+14. Print 2 copies
+15. Share bill to WhatsApp Business
+16. Create purchase
+17. Increase stock
+18. Update supplier ledger
+19. Add expense
+20. Generate report
+21. Export backup
+22. Import backup
+
+---
+
+42. PRINT PREVIEW
+
+Before printing any bill, show:
+
+Print Preview
+
+Options:
+
+Paper:
+
+A4
+58mm Thermal
+80mm Thermal
+
+Copies:
+
+1
+2
+3
+Custom
+
+Template:
+
+Classic
+Modern
+Simple
+Retail
+Compact
+Detailed
+Custom
+
+Then:
+
+[Print]
+
+[Download PDF]
+
+[Share]
+
+[WhatsApp]
+
+---
+
+43. BILL EDITOR
+
+Create a visual customization screen.
+
+It should allow the user to toggle:
+
+✓ Shop Logo
+✓ Shop Name
+✓ Address
+✓ Phone
+✓ GSTIN
+✓ Customer Details
+✓ Product SKU
+✓ Quantity
+✓ Rate
+✓ Discount
+✓ Tax
+✓ Total
+✓ Paid
+✓ Due
+✓ Payment Method
+✓ UPI ID
+✓ QR Code
+✓ Signature
+✓ Footer
+✓ Terms
+✓ Thank You Message
+
+Provide live preview.
+
+The preview should update when settings change.
+
+---
+
+44. SHOP PROFILE
+
+Allow:
+
+Shop Name
+Owner Name
+Phone
+Address
+Email
+GSTIN
+Logo
+UPI ID
+UPI Payee Name
+Invoice Prefix
+Invoice Starting Number
+
+Save these locally.
+
+---
+
+45. QR CUSTOMIZATION
+
+Allow:
+
+Show QR:
+ON/OFF
+
+QR size:
+
+Small
+Medium
+Large
+
+Position:
+
+Left
+Center
+Right
+
+Text:
+
+"Scan to Pay"
+
+---
+
+46. THERMAL RECEIPT CUSTOMIZATION
+
+Allow:
+
+58mm
+80mm
+
+Show/hide:
+
+Logo
+Address
+Phone
+Customer
+GSTIN
+Item SKU
+Discount
+Tax
+UPI ID
+QR
+Footer
+
+Make the receipt compact and printer-friendly.
+
+---
+
+47. PRINTING IMPLEMENTATION
+
+Use browser print APIs where appropriate.
+
+Generate print-specific CSS using:
+
+@media print
+
+Create separate print layouts for:
+
+A4
+58mm
+80mm
+
+Do not simply scale the A4 invoice down.
+
+Thermal invoice must have its own compact layout.
+
+If native Bluetooth printer access is not available from the browser, provide a proper system-print/print-preview fallback rather than pretending direct Bluetooth printing works.
+
+---
+
+48. RESPONSIVE DESIGN
+
+Test:
+
+360px Android phone
+390px Android phone
+412px Android phone
+Tablet
+Desktop
+
+No broken layouts.
+
+No horizontal scrolling in normal app screens.
+
+---
+
+49. PERFORMANCE
+
+Because the database is local:
+
+- Use indexes
+- Paginate large transaction lists
+- Lazy-load heavy pages
+- Avoid unnecessary re-renders
+- Keep billing screen fast
+
+The app should remain usable with a large number of local records.
+
+---
+
+50. ERROR HANDLING
+
+Never show technical errors directly to the user.
+
+Use messages like:
+
+"Something went wrong. Please try again."
+
+"Invoice could not be saved."
+
+"Backup could not be imported."
+
+"Printer is not available."
+
+Log useful developer information separately.
+
+---
+
+51. EMPTY STATES
+
+Create helpful empty states.
+
+Example:
+
+No customers yet.
+
+[ + Add Customer ]
+
+No products yet.
+
+[ + Add Product ]
+
+No invoices yet.
+
+[ + Create First Bill ]
+
+---
+
+52. CONFIRMATIONS
+
+Before:
+
+Delete customer
+Delete product
+Delete invoice
+Delete transaction
+Restore backup
+Clear profile data
+
+show confirmation dialogs.
+
+For financial data, make the warning clear.
+
+---
+
+53. SAMPLE DATA
+
+Include optional demo data for development:
+
+Customers:
+Rahul Kumar
+Amit Traders
+Suresh Kumar
+
+Products:
+Rice 25kg
+Sugar 1kg
+Oil 1L
+
+Invoices:
+INV-0001
+INV-0002
+
+Make:
+
+"Delete Demo Data"
+
+available.
+
+---
+
+54. PROJECT ARCHITECTURE
+
+Use clean modular architecture.
+
+Suggested:
+
+src/
+components/
+pages/
+layouts/
+database/
+services/
+hooks/
+utils/
+types/
+translations/
+printing/
+invoices/
+reports/
+templates/
+backup/
+whatsapp/
+
+Separate:
+
+UI
+Database
+Business logic
+Printing
+Invoice rendering
+Reports
+Backup
+WhatsApp sharing
+
+Do NOT create one giant component.
+
+---
+
+55. TECHNOLOGY
+
+Prefer:
+
+React
+TypeScript
+Tailwind CSS
+
+Use a reliable local database solution.
+
+Use PWA support.
+
+Use a PDF generation solution that works without a paid service.
+
+Use libraries only when they are free/open source and appropriate.
+
+Do not add unnecessary dependencies.
+
+---
+
+56. REPLIT REQUIREMENTS
+
+The project must run using the Replit Run button.
+
+Create:
+
+- package.json
+- proper start script
+- build script
+- README.md
+- environment configuration only if absolutely required
+
+Do not require paid Replit features for the application itself.
+
+---
+
+57. TESTING
+
+After implementation:
+
+Run the app.
+
+Check:
+
+- Build errors
+- Runtime errors
+- Console errors
+- Mobile responsiveness
+- Database operations
+- Invoice calculations
+- Stock calculations
+- Khata calculations
+- Printing
+- PDF generation
+- Backup/restore
+- WhatsApp redirect
+- QR generation
+
+Fix all important errors.
+
+---
+
+58. FINAL ACCEPTANCE TEST
+
+The app is NOT complete until this exact test works:
+
+Create:
+
+Shop:
+Mera General Store
+
+Customer:
+Rahul
+
+Product:
+Rice
+
+Stock:
+100 KG
+
+Selling price:
+₹50/KG
+
+Create sale:
+
+5 KG
+
+Total:
+₹250
+
+Paid:
+₹100
+
+Due:
+₹150
+
+After saving:
+
+Stock must become:
+95 KG
+
+Rahul's outstanding must increase by:
+₹150
+
+Invoice must show:
+
+Total ₹250
+Paid ₹100
+Due ₹150
+
+Invoice must have:
+
+Shop details
+Customer
+Items
+Total
+Paid
+Due
+
+If UPI is enabled:
+
+Show UPI ID
+Show payment QR
+
+Then successfully:
+
+- Preview A4
+- Preview 58mm
+- Preview 80mm
+- Print 2 copies
+- Generate PDF
+- Open WhatsApp/WhatsApp Business sharing
+- Export backup
+
+Then create a ₹100 payment from Rahul.
+
+The khata should update to:
+
+Due:
+₹50
+
+All calculations must remain correct.
+
+---
+
+59. FINAL INSTRUCTION TO REPLIT AI
+
+DO NOT STOP AT THE UI.
+
+Build the actual working application.
+
+First create the architecture and local database.
+
+Then implement:
+
+1. Profile system
+2. Dashboard
+3. Customers
+4. Khata
+5. Suppliers
+6. Products
+7. Inventory
+8. Sales
+9. Purchases
+10. Expenses
+11. Invoice engine
+12. Bill templates
+13. Bill customization
+14. UPI QR
+15. A4 printing
+16. 58mm thermal printing
+17. 80mm thermal printing
+18. Two-copy printing
+19. WhatsApp Business sharing
+20. Reports
+21. Backup/restore
+22. PWA/offline support
+23. Testing
+
+After implementation, inspect the complete project and identify anything from this specification that is incomplete.
+
+Implement missing functionality.
+
+Fix bugs.
+
+Do not replace working features unnecessarily.
+
+Do not add cloud database.
+
+Do not add paid subscriptions.
+
+Do not add artificial usage limits.
+
+Do not copy proprietary code/assets/designs from MyBillBook or Khatabook.
+
+The final application should be a polished, original, free, offline-first, local-storage-based Indian shop billing + khata + inventory application with a beautiful white-and-blue interface.

@@ -1,12 +1,14 @@
-# [Project name]
+# Mera Hisab
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+An offline-first Android-focused shop companion for billing, khata, customer records, products, stock, payments, and local backups.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
+- `pnpm --filter @workspace/mera-hisab run dev` — run the Expo mobile preview
+- `pnpm --filter @workspace/mera-hisab run typecheck` — typecheck the mobile app
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
@@ -14,6 +16,7 @@ _Replace the heading above with the project's name, and this line with one sente
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
+- Expo 57, React Native 0.86, Expo Router, AsyncStorage
 - API: Express 5
 - DB: PostgreSQL + Drizzle ORM
 - Validation: Zod (`zod/v4`), `drizzle-zod`
@@ -22,15 +25,21 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/mera-hisab/context/AppContext.tsx` — local-only business state and persistence
+- `artifacts/mera-hisab/app/(tabs)/` — Home, Khata, Bills, Stock, and More mobile screens
+- `artifacts/mera-hisab/components/` — shared mobile UI and quick-entry sheets
+- `artifacts/mera-hisab/constants/colors.ts` — Mera Hisab visual tokens
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first app build is frontend-only and stores all business records in AsyncStorage on the device.
+- Money is represented as integer rupees in the local store and formatted at the display boundary.
+- Saving a sale atomically updates the invoice list, product stock, and customer ledger state together.
+- WhatsApp sharing uses the device share sheet/deep link; the app never sends messages automatically.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Mera Hisab provides a mobile dashboard, quick sale entry, customer khata, customer payments, product inventory, stock top-ups, expenses, invoice detail sharing, UPI business details, demo data, and local JSON backup sharing.
 
 ## User preferences
 
