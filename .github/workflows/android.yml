@@ -15,10 +15,6 @@ jobs:
     name: Build release APK
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: artifacts/mera-hisab/android
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
