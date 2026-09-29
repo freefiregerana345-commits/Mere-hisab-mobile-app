@@ -45,6 +45,8 @@ jobs:
           cache: gradle
 
       - name: Set up Android SDK
+        with:
+            cmdline-tools: lastest 
         uses: android-actions/setup-android@v3
 
       - name: Install required Android SDK packages
