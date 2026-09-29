@@ -46,7 +46,7 @@ jobs:
 
       - name: Set up Android SDk 
        
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Install required Android SDK packages
         run: |
