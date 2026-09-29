@@ -55,7 +55,7 @@ jobs:
             "cmake;3.22.1"
 
       - name: Verify Gradle and Android SDK
-        run: cd android && ./gradlew --version
+        run: cd artifacts/mere-hisab/android &&./gradlew --version
 
       - name: Build release APK
         run: |
