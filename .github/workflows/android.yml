@@ -46,7 +46,7 @@ jobs:
 
       - name: Set up Android SDK
         with:
-            cmdline-tools: lastest 
+            cmdline-tools-version: latest 
         uses: android-actions/setup-android@v3
 
       - name: Install required Android SDK packages
